@@ -1,0 +1,23 @@
+{
+  "name": "gollum",
+  "version": "1.0.0",
+  "description": "UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huahua029/Gollum.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "huahua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huahua029/Gollum/issues"
+  },
+  "homepage": "https://github.com/huahua029/Gollum#readme"
+}
