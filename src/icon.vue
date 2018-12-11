@@ -5,7 +5,8 @@
 </template>
 
 <script>
-export default {
+    import './svg'
+    export default {
     props: ['name']
 }
 </script>
