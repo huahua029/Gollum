@@ -2,7 +2,7 @@
   "name": "huahua-test-2018",
   "version": "0.0.2",
   "description": "UI框架",
-  "main": "dist/index.js",
+  "main": "dist/index.html",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
