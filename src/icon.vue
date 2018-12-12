@@ -7,7 +7,8 @@
 <script>
     import './svg'
     export default {
-    props: ['name']
+        name: 'GollumIcon',
+        props: ['name']
 }
 </script>
 

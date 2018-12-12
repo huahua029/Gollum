@@ -12,6 +12,7 @@
     import Icon from './icon'
 
     export default {
+        name: 'GollunButton',
         components: {
           'g-icon': Icon
         },
