@@ -10,6 +10,10 @@
             box-sizing: border-box;
         }
 
+        img {
+            max-width: 100%;
+        }
+
         html {
             --button-height: 32px;
             --font-size: 14px;
@@ -28,11 +32,6 @@
         body {
             font-size: var(--font-size);
             border: 1px solid red;
-        }
-    </style>
-    <style>
-        .box{
-            margin: 20px;
         }
     </style>
 </head>
@@ -62,36 +61,17 @@
         <button @click="message+=1">+1</button>
     </div>
     <hr>
-    <g-row>
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-    </g-row>
-    <g-row gutter="20">
-        <g-col>3</g-col>
-        <g-col>4</g-col>
-    </g-row>
-    <g-row gutter="30">
-        <g-col>5</g-col>
-        <g-col>6</g-col>
-    </g-row>
-    <!--<g-row>-->
-        <!--<g-col span="2"></g-col>-->
-        <!--<g-col span="22"></g-col>-->
-    <!--</g-row>-->
-    <!--<g-row>-->
-        <!--<g-col span="2"></g-col>-->
-        <!--<g-col span="20" offset="2"></g-col>-->
-    <!--</g-row>-->
-    <!--<g-row>-->
-        <!--<g-col span="4"></g-col>-->
-        <!--<g-col span="8" offset="2"></g-col>-->
-        <!--<g-col span="8" offset="2"></g-col>-->
-    <!--</g-row>-->
-    <!--<g-row gutter="30">-->
-        <!--<g-col></g-col>-->
-        <!--<g-col></g-col>-->
-        <!--<g-col></g-col>-->
-    <!--</g-row>-->
+    <div style="border: 1px solid black;">
+        <g-row>
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+        </g-row>
+        <g-row gutter="20">
+            <g-col>3</g-col>
+            <g-col>4</g-col>
+        </g-row>
+    </div>
+
 </div>
 <script src="./src/app.js"></script>
 </body>

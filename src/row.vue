@@ -1,5 +1,5 @@
 <template>
-    <div :style="rowStyle" class="row">
+    <div :class="rowClass" :style="rowStyle" class="row">
         <slot></slot>
     </div>
 </template>
@@ -8,27 +8,46 @@
         name: 'GollumRow',
         props: {
             gutter: {
-                type: [Number,String]
+                type: [Number, String]
+            },
+            align: {
+                type: String,
+                validator(value) {
+                    return ['left', 'right', 'center'].includes(value)
+                }
             }
         },
-        computed:{
-          rowStyle(){
-              let {gutter} = this
-              return {
-                  marginLeft: -gutter/2+'px',
-                  marginRight:-gutter/2+'px'
-              }
-          }
+        computed: {
+            rowStyle() {
+                let {gutter} = this
+                return {
+                    marginLeft: -gutter / 2 + 'px',
+                    marginRight: -gutter / 2 + 'px'
+                }
+            },
+            rowClass() {
+                let {align} = this
+                return [align && `align-${align}`]
+            }
         },
         mounted() {
-            this.$children.forEach((vm)=>{
+            this.$children.forEach((vm) => {
                 vm.gutter = this.gutter
             })
         }
     }
 </script>
 <style lang="scss" scoped>
-    .row{
+    .row {
         display: flex;
+        &.align-left{
+            justify-content: flex-start;
+        }
+        &.align-center{
+            justify-content: center;
+        }
+        &.align-right{
+            justify-content: flex-end;
+        }
     }
 </style>
