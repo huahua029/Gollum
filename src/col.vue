@@ -4,6 +4,16 @@
     </div>
 </template>
 <script>
+    let validator = (value) => {
+        let key = Object.keys(value)
+        let valid = true
+        key.forEach(key => {
+            if (!['span', 'offset'].includes(key)) {
+                valid = false
+            }
+        })
+        return valid
+    }
     export default {
         name: 'GollumCol',
         props: {
@@ -12,6 +22,22 @@
             },
             offset: {
                 type: [Number, String]
+            },
+            ipad: {
+                type: Object,
+                validator,
+            },
+            narrowPc: {
+                type: Object,
+                validator,
+            },
+            pc: {
+                type: Object,
+                validator,
+            },
+            widePc: {
+                type: Object,
+                validator,
             }
         },
         data() {
@@ -28,8 +54,15 @@
                 }
             },
             colClass() {
-                let {span, offset} = this
-                return [span && `col-${span}`, offset && `offset-${offset}`]
+                let {span, offset, pc, ipad, narrowPc, widePc} = this
+                return [
+                    span && `col-${span}`,
+                    offset && `offset-${offset}`,
+                    pc && `col-phone-${pc.span}`,
+                    ipad && `col-ipad-${ipad.span}`,
+                    narrowPc && `col-narrow-pc-${narrowPc.span}`,
+                    widePc && `col-wide-pc-${widePc.span}`,
+                ]
             }
         }
     }
@@ -38,20 +71,86 @@
     .col {
         height: 100px;
         /*width: 50%;*/
-    }
+        border: 1px solid red;
 
-    $class-prefix: col-;
-    @for $n from 1 through 24 {
-        .#{$class-prefix}#{$n} {
-            width: ($n / 24) * 100%;
+        $class-prefix: col-;
+        @for $n from 1 through 24 {
+            &.#{$class-prefix}#{$n} {
+                width: ($n / 24) * 100%;
+            }
         }
-    }
 
-    $class-prefix: offset-;
-    @for $n from 1 through 24 {
-        .#{$class-prefix}#{$n} {
-            margin-left: ($n / 24) * 100%;
+        $class-prefix: offset-;
+        @for $n from 1 through 24 {
+            &.#{$class-prefix}#{$n} {
+                margin-left: ($n / 24) * 100%;
+            }
         }
+
+        @media (min-width: 577px) {
+            $class-prefix: col-ipad-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    width: ($n / 24) * 100%;
+                }
+            }
+
+            $class-prefix: offset-ipad-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    margin-left: ($n / 24) * 100%;
+                }
+            }
+        }
+
+        @media (min-width: 769px) {
+            $class-prefix: col-narrow-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    width: ($n / 24) * 100%;
+                }
+            }
+
+            $class-prefix: offset-narrow-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    margin-left: ($n / 24) * 100%;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            $class-prefix: col-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    width: ($n / 24) * 100%;
+                }
+            }
+
+            $class-prefix: offset-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    margin-left: ($n / 24) * 100%;
+                }
+            }
+        }
+        @media (min-width: 1201px) {
+            $class-prefix: col-wide-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    width: ($n / 24) * 100%;
+                }
+            }
+
+            $class-prefix: offset-wide-pc-;
+            @for $n from 1 through 24 {
+                &.#{$class-prefix}#{$n} {
+                    margin-left: ($n / 24) * 100%;
+                }
+            }
+        }
+
+
     }
 
 </style>
