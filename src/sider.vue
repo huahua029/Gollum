@@ -3,6 +3,11 @@
         <slot></slot>
     </div>
 </template>
+<script>
+    export default {
+        name: 'GullumSider'
+    }
+</script>
 <style lang="scss" scoped>
     .sider{
 
