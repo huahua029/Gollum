@@ -43,7 +43,7 @@ new Vue({
         showToast() {
             this.$toast('我是测试我是测试',{
                 autoClose: false,
-                position: 'middle',
+                position: 'top',
                 enableHtml: false,
                 closeButton: {
                     text: '已完成'
