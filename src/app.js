@@ -37,7 +37,14 @@ new Vue({
         loading3: false,
     },
     created(){
-        this.$toast('我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试',{enableHtml: true})
+        this.$toast('我是测试我是测试',{
+            autoClose: false,
+            position: 'bottom',
+            enableHtml: false,
+            closeButton: {
+                text: '已完成'
+            }
+        })
     }
     // methods: {
     //     message() {
