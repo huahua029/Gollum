@@ -42,7 +42,7 @@ new Vue({
     methods: {
         showToast() {
             this.$toast('我是测试我是测试',{
-                autoClose: false,
+                autoClose: 3,
                 position: 'top',
                 enableHtml: false,
                 closeButton: {
