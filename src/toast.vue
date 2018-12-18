@@ -85,7 +85,13 @@
     $font-size: 14px;
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.74);
-    .toast { font-size: $font-size;line-height: 1.8;min-height: $toast-min-height;
+    @keyframes fade-in {
+        from { opacity: 0;transform: translateY(100%)}
+        to {opacity: 1;transform: translateY(0)}
+    }
+    .toast {
+        animation: fade-in .5s;
+        font-size: $font-size;line-height: 1.8;min-height: $toast-min-height;
         color: white;position: fixed;left: 50%;
         display: flex;align-items: center;
         border-radius: 4px;background: $toast-bg;
