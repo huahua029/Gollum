@@ -14,18 +14,18 @@ import Toast from './toast'
 import plugin from './plugin'
 
 
-Vue.component('g-button',Button)
-Vue.component('g-icon',Icon)
-Vue.component('g-button-group',ButtonGroup)
-Vue.component('g-input',Input)
-Vue.component('g-row',Row)
-Vue.component('g-col',Col)
-Vue.component('g-layout',Layout)
-Vue.component('g-header',Header)
-Vue.component('g-sider',Sider)
-Vue.component('g-content',Content)
-Vue.component('g-footer',Footer)
-Vue.component('g-toast',Toast)
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
+Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-input', Input)
+Vue.component('g-row', Row)
+Vue.component('g-col', Col)
+Vue.component('g-layout', Layout)
+Vue.component('g-header', Header)
+Vue.component('g-sider', Sider)
+Vue.component('g-content', Content)
+Vue.component('g-footer', Footer)
+Vue.component('g-toast', Toast)
 
 Vue.use(plugin)
 
@@ -36,9 +36,19 @@ new Vue({
         loading2: false,
         loading3: false,
     },
-    methods: {
-        showToast(){
-            this.$toast('我是message')
-        }
+    created(){
+        this.$toast('我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试',{enableHtml: true})
     }
+    // methods: {
+    //     message() {
+    //         this.$toast('即将前往：xx', {
+    //             closeButton: {
+    //                 text: '关闭',
+    //                 callback() {
+    //                     console.log('用户说知道了')
+    //                 }
+    //             }
+    //         })
+    //     }
+    // }
 })
