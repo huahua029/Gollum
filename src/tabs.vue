@@ -32,7 +32,10 @@
       }
     },
     mounted() {
-      console.log(this.$children)
+      if(this.$children.length === 0){
+        console && console.warn &&
+        console.warn('tabs没有子组件（tabs-head/tabs-body）')
+      }
       this.$children.forEach((vm) => {
         if (vm.$options.name === 'GullumTabsHead') {
           vm.$children.forEach((childVm) => {
