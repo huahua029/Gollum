@@ -1,6 +1,6 @@
 <template>
-    <div @click="xxx" class="popover">
-        <div class="content-wrapper" v-if="visible">
+    <div @click.stop="xxx" class="popover">
+        <div @click.stop class="content-wrapper" v-if="visible">
             <slot name="content"></slot>
         </div>
         <slot></slot>
@@ -10,28 +10,38 @@
 <script>
   export default {
     name: "GollumPopover",
-    data(){
+    data() {
       return {visible: false}
     },
     methods: {
-      xxx(){
+      xxx() {
         this.visible = !this.visible
+        if (this.visible === true) {
+          this.$nextTick(() => {
+            let eventHandler = () => {
+              this.visible = false
+              document.removeEventListener('click', eventHandler)
+            }
+            document.addEventListener('click', eventHandler)
+          })
+        }
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-    .popover{
+    .popover {
         display: inline-block;
         vertical-align: top;
         position: relative;
-        .content-wrapper{
+
+        .content-wrapper {
             position: absolute;
             bottom: 100%;
             left: 0;
             border: 1px solid red;
-            box-shadow: 0 0 3px rgba(0,0,0,0.5);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         }
     }
 </style>
