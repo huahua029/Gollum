@@ -5,7 +5,10 @@
 </template>
 <script>
     export default {
-        name: 'GullumTabsBody'
+        name: 'GullumTabsBody',
+        inject: ['eventBus'],
+        created() {
+        }
     }
 </script>
 <style>
