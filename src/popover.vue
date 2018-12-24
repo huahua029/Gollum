@@ -43,24 +43,28 @@
         const {contentWrapper, triggerWrapper} = this.$refs
         document.body.appendChild(contentWrapper)
         let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+        let {height: height2} = contentWrapper.getBoundingClientRect()
 
-        if (this.position === 'top') {
-          contentWrapper.style.top = top + window.scrollY + 'px'
-          contentWrapper.style.left = left + window.scrollX + 'px'
-        } else if (this.position === 'bottom') {
-          contentWrapper.style.top = top + height + window.scrollY + 'px'
-          contentWrapper.style.left = left + window.scrollX + 'px'
-        } else if (this.position === 'left') {
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
-            (height - height2) / 2 + 'px'
-          contentWrapper.style.left = left + window.scrollX + 'px'
-        }else if(this.position === 'right'){
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
-            (height - height2) / 2 + 'px'
-          contentWrapper.style.left = left + window.scrollX + width+ 'px'
+        let positions= {
+          top: {
+            top: top + window.scrollY,
+            left: left + window.scrollX
+          },
+          bottom: {
+            top: top + height + window.scrollY,
+            left: left + window.scrollX
+          },
+          left: {
+            top: top + window.scrollY + (height - height2) / 2,
+            left: left + window.scrollX
+          },
+          right: {
+            top: top + window.scrollY + (height - height2) / 2,
+            left: left + width + window.scrollX
+          },
         }
+        contentWrapper.style.top = positions[this.position].top + 'px'
+        contentWrapper.style.left = positions[this.position].left + 'px'
       },
       open() {
         this.visible = true
@@ -157,6 +161,7 @@
         &.position-left {
             transform: translateX(-100%);
             margin-left: -10px;
+
             &::before, &::after {
                 left: 100%;
                 transform: translateY(-50%);
@@ -173,8 +178,10 @@
                 left: calc(100% - 1px);
             }
         }
+
         &.position-right {
             margin-left: 10px;
+
             &::before, &::after {
                 transform: translateY(-50%);
                 top: 50%;
