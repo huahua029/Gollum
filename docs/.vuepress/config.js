@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/Gollum/',
   title: 'Gullum UI',
   description: '一个简约的UI框架',
   themeConfig: {
