@@ -9,7 +9,5 @@
     }
 </script>
 <style lang="scss" scoped>
-    .footer{
 
-    }
 </style>
