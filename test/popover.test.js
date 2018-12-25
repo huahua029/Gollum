@@ -33,9 +33,29 @@ describe('Popover', () => {
         done()
       })
     })
-    // const useElement = vm.$el.querySelector('use')
-    // expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings')
-    // vm.$destroy()
+  })
+  xit('可以设置trigger',(done)=>{
+    Vue.component('g-popover', Popover)
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    div.innerHTML = `
+            <g-popover position="bottom" ref="a">
+                <template slot="content">
+                    <div>popover内容</div>
+                </template>
+            <button>点我</button>
+    </g-popover>
+        `
+    const vm = new Vue({
+      el: div
+    })
+    let event = new Event('mouseenter')
+    vm.$el.dispatchEvent(event)
+    vm.$nextTick(()=>{
+      let {contentWrapper} = vm.$refs.a.$refs
+      expect(contentWrapper).to.exist
+      done()
+    })
   })
 
 })
