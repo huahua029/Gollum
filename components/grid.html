@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grid | Gullum UI</title>
+    <meta name="description" content="一个简约的UI框架">
+    
+    
+    <link rel="preload" href="/Gollum/assets/css/0.styles.fef0e76a.css" as="style"><link rel="preload" href="/Gollum/assets/js/app.5670afae.js" as="script"><link rel="preload" href="/Gollum/assets/js/18.c0e756f6.js" as="script"><link rel="preload" href="/Gollum/assets/js/4.c78b88a8.js" as="script"><link rel="preload" href="/Gollum/assets/js/5.13d1c671.js" as="script"><link rel="preload" href="/Gollum/assets/js/6.e8beb23b.js" as="script"><link rel="prefetch" href="/Gollum/assets/js/10.8a9ddfa9.js"><link rel="prefetch" href="/Gollum/assets/js/11.f66921c8.js"><link rel="prefetch" href="/Gollum/assets/js/12.6139e67f.js"><link rel="prefetch" href="/Gollum/assets/js/13.9f32d2f6.js"><link rel="prefetch" href="/Gollum/assets/js/14.8db51495.js"><link rel="prefetch" href="/Gollum/assets/js/15.6a6316f3.js"><link rel="prefetch" href="/Gollum/assets/js/16.a12a7a04.js"><link rel="prefetch" href="/Gollum/assets/js/17.28e87de7.js"><link rel="prefetch" href="/Gollum/assets/js/19.3018b9d8.js"><link rel="prefetch" href="/Gollum/assets/js/2.6f1ca2ed.js"><link rel="prefetch" href="/Gollum/assets/js/20.f105312a.js"><link rel="prefetch" href="/Gollum/assets/js/21.d2ab08b2.js"><link rel="prefetch" href="/Gollum/assets/js/22.db0f1def.js"><link rel="prefetch" href="/Gollum/assets/js/23.0db1e90f.js"><link rel="prefetch" href="/Gollum/assets/js/24.f0a2ede7.js"><link rel="prefetch" href="/Gollum/assets/js/25.2a595774.js"><link rel="prefetch" href="/Gollum/assets/js/26.c3a3770d.js"><link rel="prefetch" href="/Gollum/assets/js/27.7a6ffda6.js"><link rel="prefetch" href="/Gollum/assets/js/3.451fc8d5.js"><link rel="prefetch" href="/Gollum/assets/js/7.201ece81.js"><link rel="prefetch" href="/Gollum/assets/js/8.c9e62ee2.js"><link rel="prefetch" href="/Gollum/assets/js/9.50dc7186.js">
+    <link rel="stylesheet" href="/Gollum/assets/css/0.styles.fef0e76a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Gollum/" class="home-link router-link-active"><!----> <span class="site-name">Gullum UI</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>入门</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/Gollum/components/button.html" class="sidebar-link">Button</a></li><li><a href="/Gollum/components/tabs.html" class="sidebar-link">Tabs</a></li><li><a href="/Gollum/components/input.html" class="sidebar-link">Input</a></li><li><a href="/Gollum/components/grid.html" class="active sidebar-link">Grid</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Gollum/components/grid.html#_24格网格" class="sidebar-link">24格网格</a></li><li class="sidebar-sub-header"><a href="/Gollum/components/grid.html#设置gutter" class="sidebar-link">设置gutter</a></li><li class="sidebar-sub-header"><a href="/Gollum/components/grid.html#设置偏移" class="sidebar-link">设置偏移</a></li></ul></li><li><a href="/Gollum/components/layout.html" class="sidebar-link">Layout</a></li><li><a href="/Gollum/components/toast.html" class="sidebar-link">Toast</a></li><li><a href="/Gollum/components/popover.html" class="sidebar-link">Popover</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="网格"><a href="#网格" aria-hidden="true" class="header-anchor">#</a> 网格</h1> <h2 id="_24格网格"><a href="#_24格网格" aria-hidden="true" class="header-anchor">#</a> 24格网格</h2> <p>预览
+<div data-v-2596faa1><div class="row demoRow" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-aa6097c2 data-v-2596faa1><div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>8</div></div> <div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>8</div></div> <div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>8</div></div></div> <div class="row demoRow" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-aa6097c2 data-v-2596faa1><div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>6</div></div></div> <div class="row demoRow" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-aa6097c2 data-v-2596faa1><div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div> <div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div> <div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div> <div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div> <div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div> <div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>4</div></div></div> <div class="row demoRow" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-aa6097c2 data-v-2596faa1><div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-2596faa1><div class="demoCol" data-v-97915060 data-v-2596faa1>2</div></div></div></div></p> <p>使用方法</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot;&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;g-row class=&quot;demoRow&quot;&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;g-row class=&quot;demoRow&quot;&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;g-row class=&quot;demoRow&quot;&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;2&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+</code></pre></div><h2 id="设置gutter"><a href="#设置gutter" aria-hidden="true" class="header-anchor">#</a> 设置gutter</h2> <div data-v-5d1a739d><div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-5d1a739d><div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>8</div></div> <div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>8</div></div> <div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>8</div></div></div> <div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-5d1a739d><div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>6</div></div> <div class="col col-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-5d1a739d><div class="demoCol" data-v-97915060 data-v-5d1a739d>6</div></div></div></div> <p>使用方法</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;8&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+    &lt;g-col span=&quot;6&quot;&gt;
+        &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+    &lt;/g-col&gt;
+&lt;/g-row&gt;
+</code></pre></div><h2 id="设置偏移"><a href="#设置偏移" aria-hidden="true" class="header-anchor">#</a> 设置偏移</h2> <div data-v-aa4b0e36><div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-aa4b0e36><div class="col col-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>8</div></div> <div class="col col-8 offset-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>8</div></div></div> <div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-aa4b0e36><div class="col col-6 offset-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>6</div></div> <div class="col col-6 offset-6" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>6</div></div></div> <div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-aa4b0e36><div class="col col-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>4</div></div> <div class="col col-4 offset-4" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>4</div></div> <div class="col col-4 offset-8" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>4</div></div></div> <div class="row demoRow" style="margin-left:-5px;margin-right:-5px;" data-v-aa6097c2 data-v-aa4b0e36><div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2 offset-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2 offset-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2 offset-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div> <div class="col col-2 offset-2" style="padding-left:0px;padding-right:0px;" data-v-97915060 data-v-aa4b0e36><div class="demoCol" data-v-97915060 data-v-aa4b0e36>2</div></div></div></div> <p>使用方法</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+  &lt;g-col span=&quot;8&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;8&quot; offset=&quot;8&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;
+  &lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+  &lt;g-col span=&quot;6&quot; offset=&quot;6&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot; offset=&quot;6&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;
+  &lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+  &lt;g-col span=&quot;4&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;4&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;8&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;
+  &lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;10&quot;&gt;
+  &lt;g-col span=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot; offset=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot; offset=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot; offset=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot; offset=&quot;2&quot;&gt;
+    &lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;
+  &lt;/g-col&gt;
+&lt;/g-row&gt;
+
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/Gollum/components/input.html" class="prev">
+          Input
+        </a></span> <span class="next"><a href="/Gollum/components/layout.html">
+          Layout
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/Gollum/assets/js/app.5670afae.js" defer></script><script src="/Gollum/assets/js/18.c0e756f6.js" defer></script><script src="/Gollum/assets/js/4.c78b88a8.js" defer></script><script src="/Gollum/assets/js/5.13d1c671.js" defer></script><script src="/Gollum/assets/js/6.e8beb23b.js" defer></script>
+  </body>
+</html>
