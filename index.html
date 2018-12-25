@@ -34,11 +34,12 @@
 </head>
 <body>
 <div id="app" style="padding:100px;">
-   <g-collapse selected="2">
+   <g-collapse :selected.sync="selectedTab">
        <g-collapse-item name="1" title="标题１">内容１</g-collapse-item>
        <g-collapse-item name="2" title="标题１">内容２</g-collapse-item>
        <g-collapse-item name="3" title="标题１">内容３</g-collapse-item>
    </g-collapse>
+    {{selectedTab}}
 </div>
 <script src="./src/app.js"></script>
 </body>
