@@ -1,6 +1,8 @@
 <template>
-    <div @click="onClick" class="popover">
-        <div :class="{[`position-${position}`]:true}" class="content-wrapper" ref="contentWrapper"
+    <div class="popover" ref="popover">
+        <div :class="{[`position-${position}`]:true}"
+             class="content-wrapper"
+             ref="contentWrapper"
              v-if="visible">
             <slot name="content"></slot>
         </div>
@@ -16,12 +18,51 @@
     data() {
       return {visible: false}
     },
+    computed: {
+      openEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseenter'
+        }
+      },
+      closeEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseleave'
+        }
+      }
+    },
+    mounted(){
+      if(this.trigger === 'click'){
+        this.$refs.popover.addEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
+    },
+    destroyed(){
+      if(this.trigger === 'click'){
+        this.$refs.popover.removeEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.removeEventListener('mouseenter',this.open)
+        this.$refs.popover.removeEventListener('mouseleave',this.close)
+      }
+    },
     props: {
       position: {
         type: String,
         default: 'top',
         validator(value) {
           return ['top', 'left', 'bottom', 'right'].indexOf(value) >= 0
+        }
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator(value){
+          return ['click','hover'].indexOf(value) >= 0
         }
       }
     },
@@ -86,9 +127,6 @@
           }
         }
       }
-    },
-    mounted() {
-      console.log('mounted')
     }
   }
 </script>
@@ -132,6 +170,7 @@
             &::before {
                 border-top-color: #000;
                 top: 100%;
+                border-bottom: none;
             }
 
             &::after {
@@ -150,11 +189,13 @@
             &::before {
                 border-bottom-color: #000;
                 bottom: 100%;
+                border-top:none;
             }
 
             &::after {
                 border-bottom-color: white;
                 bottom: calc(100% - 1px);
+                border-top:none;
             }
         }
 
@@ -166,6 +207,7 @@
                 left: 100%;
                 transform: translateY(-50%);
                 top: 50%;
+                border-right: none;
             }
 
             &::before {
@@ -185,6 +227,7 @@
             &::before, &::after {
                 transform: translateY(-50%);
                 top: 50%;
+                border-left:none;
             }
 
             &::before {
